@@ -5,7 +5,9 @@ export const FunkoList = ({ funkoPops }) => {
   return (
     <>
       {funkoPops.map((funkoPop, idx) => {
-        return <Funko funkoPop={funkoPop} key={idx} />;
+        return <Funko funkoPop={funkoPop} key={idx}
+       />;
+
       })}
     </>
   );
