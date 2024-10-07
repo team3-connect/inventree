@@ -6,14 +6,14 @@ import { FunkoList } from "./FunkoList";
 import apiURL from "../api";
 import { Funko } from "./Funko";
 import { funkopops } from "../../../server/seedData";
-
+console.log(apiURL, "Api");
 export const App = () => {
   const [sauces, setSauces] = useState([]);
   const [funkoPops, setFunkoPops] = useState([]);
 
   async function fetchFunkos() {
     try {
-      const response = await fetch(`http://localhost:3000/api/funkopops`);
+      const response = await fetch(`${apiURL}/funkopops`);
       const funkoData = await response.json();
 
       setFunkoPops(funkoData);
@@ -34,13 +34,9 @@ export const App = () => {
   }
 
   useEffect(() => {
-    // fetchSauces();
+    fetchSauces();
     fetchFunkos();
   }, []);
-
-  // useEffect(() => {
-  //   fetchFunkos();
-  // }, []);
 
   return (
     <main>
