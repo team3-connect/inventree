@@ -1,14 +1,14 @@
 const { Sequelize } = require("sequelize");
 const { sequelize } = require("../db");
-const { FunkoPop } = require("../models/FunkoPop");
 
-const Sauce = sequelize.define("sauces", {
+const FunkoPop = sequelize.define("funkopops", {
   name: Sequelize.STRING,
+  description: Sequelize.STRING,
+  price: Sequelize.NUMBER,
+  category: Sequelize.STRING,
   image: Sequelize.STRING,
 });
 
 module.exports = {
   db: sequelize,
-  Sauce,
-  FunkoPop,
-};
+  FunkoPop}
