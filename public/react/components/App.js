@@ -35,9 +35,7 @@ export const App = () => {
     }
   }
   async function fetchPage(id){
-	try{
-    const url = `${apiURL}/funkopops/${id}`
-    const response = await fetch(url);
+    const response = await fetch(`${apiURL}/funkopops/${id}`);
    const data = await response.json()
     setFunko(data)
     console.log(response)
@@ -46,10 +44,6 @@ export const App = () => {
     console.log(`${apiURL}/funkopops/${id}`)
     console.log(data.name)
     setView(false)
-} catch (err) {
-	console.log("Oh no an error! ", err);
-  }
-  
   }
 
   useEffect(() => {
@@ -63,8 +57,7 @@ export const App = () => {
 		<h1>FunkoPop Store</h1>
 		<h2>All things 🔥</h2>
 		<h2>{funko.name}</h2>
-		<image/>
-		{/* <img src={funko.image} alt={funko.name}/> */}
+		<img src={funko.image}></img>
 	  </main></>)
 	  :
     (<><main>

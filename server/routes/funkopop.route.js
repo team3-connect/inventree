@@ -13,7 +13,7 @@ router.get("/", async (req, res, next) => {
 });
 router.get("/:id", async (req, res, next) => {
   try {
-    const funkopops = await FunkoPop.findByPk(req.params.id);
+    const funkopops = await FunkoPop.findOne({where: {id:req.params.id}});
     res.send(funkopops);
   } catch (error) {
     next(error);

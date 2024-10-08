@@ -9,7 +9,7 @@ export const FunkoList = ({ funkoPops, fetchPage }) => {
             <Funko funkoPop={funkoPop} key={idx}
        /></a>
        <button variant="outlined"  size="small" className= "pageNav" 
-        style={{borderRadius: "10px", width: "200px"}} onClick ={() =>fetchPage()}>{funkoPop.name}</button></div>);
+        style={{borderRadius: "10px", width: "200px"}} onClick ={() =>fetchPage(funkoPop.id)}>{funkoPop.name}</button></div>);
 
       })}
     </>
