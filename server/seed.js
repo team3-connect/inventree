@@ -1,4 +1,4 @@
-const {sauces, items} = require('./seedData.js');
+const {sauces, items, funkos} = require('./seedData.js');
 
 const {sequelize} = require('./db');
 const {Sauce, Funkos} = require('./models');
@@ -11,7 +11,7 @@ const seed = async () => {
     
         // insert data
         await Promise.all(sauces.map(sauce => Sauce.create(sauce)));
-        await Promise.all(items.map(funko => Funkos.create(funko)));
+        await Promise.all(funkos.map(funko => Funkos.create(funko)));
 
         console.log("db populated!");
     } catch (error) {
