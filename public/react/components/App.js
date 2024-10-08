@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { SaucesList } from "./SaucesList";
 import { FunkoList } from "./FunkoList";
+import Button from '@mui/material/Button';
 
 // import and prepend the api url to any fetch calls
 import apiURL from "../api";
@@ -58,7 +59,7 @@ export const App = () => {
 		<h2>All things 🔥</h2>
 		<h2>{funko.name}</h2>
 		<img src={funko.image}></img>
-		<button onClick ={() => {setView(true)}}>Back Home</button>
+		<Button onClick ={() => {setView(true)}}>Back Home</Button>
 	  </main></>)
 	  :
     (<><main>
