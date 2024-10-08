@@ -10,6 +10,8 @@ console.log(apiURL, "Api");
 export const App = () => {
   const [sauces, setSauces] = useState([]);
   const [funkoPops, setFunkoPops] = useState([]);
+  const[funko, setFunko] = useState([])
+  const [view, setView] = useState(true)
 
   async function fetchFunkos() {
     try {
@@ -32,6 +34,23 @@ export const App = () => {
       console.log("Oh no an error! ", err);
     }
   }
+  async function fetchPage(id){
+	try{
+    const url = `${apiURL}/funkopops/${id}`
+    const response = await fetch(url);
+   const data = await response.json()
+    setFunko(data)
+    console.log(response)
+    console.log(data)
+    console.log(id)
+    console.log(`${apiURL}/funkopops/${id}`)
+    console.log(data.name)
+    setView(false)
+} catch (err) {
+	console.log("Oh no an error! ", err);
+  }
+  
+  }
 
   useEffect(() => {
     fetchSauces();
@@ -39,11 +58,20 @@ export const App = () => {
   }, []);
 
   return (
-    <main>
+	<>
+	{!view ? (<> <main>
+		<h1>FunkoPop Store</h1>
+		<h2>All things 🔥</h2>
+		<h2>{funko.name}</h2>
+		<image/>
+		{/* <img src={funko.image} alt={funko.name}/> */}
+	  </main></>)
+	  :
+    (<><main>
       <h1>FunkoPop Store</h1>
       <h2>All things 🔥</h2>
-      <SaucesList sauces={sauces} />
-      <FunkoList funkoPops={funkoPops} />
-    </main>
-  );
+      <SaucesList fetchPage={fetchPage} sauces={sauces} />
+      <FunkoList fetchPage={fetchPage}  funkoPops={funkoPops} />
+    </main></>)}
+	</>);
 };
