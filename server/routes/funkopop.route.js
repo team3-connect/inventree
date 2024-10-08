@@ -53,13 +53,27 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-router.delete("/:id", async (req, res) => {
+// router.delete("/:id", async (req, res) => {
+//   try {
+//     await FunkoPop.destroy({ where: { id: req.params.id } });
+//     res.status(204);
+//   } catch (err) {
+//     res.status(500).json({ error: "Failed to delete item" });
+//   }
+// });
+router.delete('/:id', async (req, res, next) => {
   try {
-    await FunkoPop.destroy({ where: { id: req.params.id } });
-    res.status(204);
-  } catch (err) {
-    res.status(500).json({ error: "Failed to delete item" });
+    await FunkoPop.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+
+    const funkopops = await FunkoPop.findAll()
+    res.send(funkopops)
+  } catch (error) {
+    next(error)
   }
-});
+})
 
 module.exports = router;
