@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import { SaucesList } from "./SaucesList";
 import { FunkoList } from "./FunkoList";
 import Button from '@mui/material/Button';
+import { FunkoForm } from "./FunkoForm";
 
 // import and prepend the api url to any fetch calls
 import apiURL from "../api";
 import { Funko } from "./Funko";
 import { funkopops } from "../../../server/seedData";
-console.log(apiURL, "Api");
+console.log(apiURL);
 export const App = () => {
   const [sauces, setSauces] = useState([]);
   const [funkoPops, setFunkoPops] = useState([]);
@@ -16,10 +17,12 @@ export const App = () => {
 
   async function fetchFunkos() {
     try {
+      console.log(apiURL);
       const response = await fetch(`${apiURL}/funkopops`);
       const funkoData = await response.json();
 
       setFunkoPops(funkoData);
+      console.log(funkoPops);
     } catch (err) {
       console.log("Oh no an error! ", err);
     }
@@ -65,8 +68,10 @@ export const App = () => {
     (<><main>
       <h1>FunkoPop Store</h1>
       <h2>All things 🔥</h2>
+      <FunkoForm />
       <SaucesList fetchPage={fetchPage} sauces={sauces} />
       <FunkoList fetchPage={fetchPage}  funkoPops={funkoPops} />
+
     </main></>)}
 	</>);
 };

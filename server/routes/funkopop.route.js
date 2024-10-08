@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { FunkoPop } = require("../models");
+const { funkopops } = require("../seedData");
 
 // GET /sauce
 router.get("/", async (req, res, next) => {
