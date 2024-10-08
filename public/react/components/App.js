@@ -58,6 +58,7 @@ export const App = () => {
 		<h2>All things 🔥</h2>
 		<h2>{funko.name}</h2>
 		<img src={funko.image}></img>
+		<button onClick ={() => {setView(true)}}>Back Home</button>
 	  </main></>)
 	  :
     (<><main>

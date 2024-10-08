@@ -6,7 +6,7 @@ export const FunkoList = ({ funkoPops, fetchPage }) => {
     <>
       {funkoPops.map((funkoPop, idx) => {
         return( <div><a onClick ={() =>fetchPage(funkoPop.id)}>
-            <Funko funkoPop={funkoPop} key={idx}
+            <Funko funkoPop={funkoPop} key={idx} 
        /></a>
        <button variant="outlined"  size="small" className= "pageNav" 
         style={{borderRadius: "10px", width: "200px"}} onClick ={() =>fetchPage(funkoPop.id)}>{funkoPop.name}</button></div>);
