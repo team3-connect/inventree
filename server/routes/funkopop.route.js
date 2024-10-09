@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { FunkoPop } = require("../models");
 const { funkopops } = require("../seedData");
+const { where } = require("sequelize");
 
 // GET /sauce
 router.get("/", async (req, res, next) => {
@@ -39,28 +40,18 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.put("/:id", async (req, res) => {
-  try {
-    const { name, description, price, category, image } = req.body;
+router.put('/:id', async (req, res, next) => {
+  try{
+    const updateFunko = await FunkoPop.update(req.body, { where: { id: req.params.id } })
+    const funkopops = await FunkoPop.findAll()
+    console.log(updateFunko)
+    console.log(req.body)
+    res.send(funkopops)
 
-    const updatedFunko = await FunkoPop.update(
-      { name, description, price, category, image },
-      { where: { id: req.params.id } }
-    );
-    res.json(updatedFunko);
-  } catch (err) {
-    res.status(500).json({ error: "Failed to update item" });
+  }catch(error){
+    next(error)
   }
-});
-
-// router.delete("/:id", async (req, res) => {
-//   try {
-//     await FunkoPop.destroy({ where: { id: req.params.id } });
-//     res.status(204);
-//   } catch (err) {
-//     res.status(500).json({ error: "Failed to delete item" });
-//   }
-// });
+})
 router.delete('/:id', async (req, res, next) => {
   try {
     await FunkoPop.destroy({
