@@ -1,20 +1,20 @@
-const {sauces, funkopops} = require('./seedData.js');
+const { sauces, funkopops } = require("./seedData.js");
 
-const {sequelize} = require('./db');
+const { sequelize } = require("./db");
+const { FunkoPop } = require("./models");
 
 const seed = async () => {
+  try {
+    // drop and recreate tables per model definitions
+    await sequelize.sync({ force: true });
 
-    try {
-        // drop and recreate tables per model definitions
-        await sequelize.sync({ force: true });
+    // insert data
+    await Promise.all(funkopops.map((funkopop) => FunkoPop.create(funkopop)));
 
-        // insert data
-        await Promise.all(funkopops.map(funkopop => FunkoPop.create(funkopop)));
-
-        console.log("db populated!");
-    } catch (error) {
-        console.error(error);
-    }
-}
+    console.log("db populated!");
+  } catch (error) {
+    console.error(error);
+  }
+};
 
 seed();
