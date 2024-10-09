@@ -6,3 +6,7 @@
 img{
   width: 200px;
 }
+.container{
+ width: 250px;
+ border: solid;
+}

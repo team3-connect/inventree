@@ -3,6 +3,7 @@ import { SaucesList } from "./SaucesList";
 import { FunkoList } from "./FunkoList";
 import Button from '@mui/material/Button';
 import { FunkoForm } from "./FunkoForm";
+import { FunkoUpdateForm } from "./FunkoUpdateForm";
 
 // import and prepend the api url to any fetch calls
 import apiURL from "../api";
@@ -49,6 +50,16 @@ export const App = () => {
     console.log(data.name)
     setView(false)
   }
+  
+  async function fetchDeletePage(id){
+    const url = `${apiURL}/funkopops/${id}`
+    const response = await fetch(url, {method: 'DELETE'});
+    const redirect = await fetch(`${apiURL}/funkopops`)
+    const pagesData = await redirect.json()
+    setFunkoPops(pagesData)
+    console.log(pagesData)
+    
+  }
 
   useEffect(() => {
     fetchSauces();
@@ -63,6 +74,9 @@ export const App = () => {
 		<h2>{funko.name}</h2>
 		<img src={funko.image}></img>
 		<Button onClick ={() => {setView(true)}}>Back Home</Button>
+    <Button onClick ={() => {fetchDeletePage(funko.id); setView(true)}}>DELETE</Button>
+    <FunkoUpdateForm id={funko.id}/>
+
 	  </main></>)
 	  :
     (<><main>
@@ -70,7 +84,7 @@ export const App = () => {
       <h2>All things 🔥</h2>
       <FunkoForm />
       <SaucesList fetchPage={fetchPage} sauces={sauces} />
-      <FunkoList fetchPage={fetchPage}  funkoPops={funkoPops} />
+      <FunkoList fetchPage={fetchPage}  funkoPops={funkoPops} fetchDeletePage={fetchDeletePage} />
 
     </main></>)}
 	</>);
