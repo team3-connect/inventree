@@ -1,53 +1,35 @@
-![logo](https://user-images.githubusercontent.com/44912347/202296600-c5f247d6-9616-49db-88f0-38433429d781.jpg)
+# MVP Inventory Management Application
 
-# Inventory App
-You are a team of developers for an e-commerce company. The Engineering team  is rebuilding their inventory tracking app from the ground up. Your team has been tasked with creating a Full-Sack (front and back end) RESTful CRUD application to track the items.
+## Tier I: MVP Application
 
-## Getting Started
+### View All Items in Inventory
 
-1. `npm install`
-2. `npm run seed`
-3. `npm run server-dev`
-4. In a seperate terminal, `npm run client-dev`
+- Sequelize Model for Item
+- Attributes: Name, Description, Price, Category, Image
+- Express Route to GET all Items
+- `GET /api/items`
+- Front-end View for all Items
+- Displays all inventory items to the user ### View an Individual Item
+- Express Route to GET one Item
+- `GET /api/items/:id`
+- Front-end View for one Item
+- Click to see detailed view of a specific item
 
-## Inventory App “Tiers”
+## Tier II: Adding an Item ### Adding an Item
 
-The tiers describe different levels of functionality in your application with the difficulty becoming more complex as you advance through the tiers. Start with Tier I, and complete everything you can, moving as quickly as possible as you can to Tier II. They are described as user stories.
+- Front-end form to Add an Item
+- Form to input Name, Description, Price, Category, Image
+- Express Route to ADD the Item
+- `POST /api/items`
+- Form or Fetch request to add item when form is submitted
+- Submits the new item to the backend
 
-Your team should strive to finish at least the first 4 tiers (a CRUD application) and attempt some of the bonus material.
+## Tier III: Deleting an Item
 
-### Tier I: MVP Application
-- As a User, I want to view all items in inventory
-  - Sequelize Model for Item
-  - Name, Description, Price, Category, Image
-  - Express Route to GET all Items
-  - Front-end View for all Items
-- As a User, I want to view any individual item
-  - Express Route to GET one Item
-  - Front-end view for one item (click to see)
+### Removing an Item from Inventory
 
-### Tier II: Adding an Item
-- As a User, I want to add an item by completing a form
-  - Add Item front-end form
-  - Express Route to ADD the Item
-  - Form or Fetch request to add item when form is submitted
-
-### Tier III: Deleting an Item
-- As a User, I want to  remove an item from inventory
-  - Delete button on Single Item View
-  - Express Route to DELETE the Item
-  - Fetch request to delete item when button is clicked
-
-### Tier IV: Updating an Item
-- As a User, I want to edit an item by filling a form
-  - Edit form on Single Item View
-  - Express Route to UPDATE the Item
-  - Fetch request to update item when form is submitted
-
-### Tier V: Bonus Stuff
-- Models, Routes for Users and Orders
-- As a User, I want my Inventory site to be visually stunning
-- As a User, I want to be able to search through data based on search criteria
-- As a User, I want to add items to a cart and purchase
-- As a User, I want to use the application on a mobile browser
-- As an Admin, I want all Add and Edit item requests to have server-side validations
+- Delete Button on Single Item View
+- Button to remove the item
+- Express Route to DELETE the Item
+- `DELETE /api/items/:id`
+- \*\*Fetch Request to Delete Item when Bu
