@@ -17,3 +17,6 @@
 - Backend: Express.js
 - Database: SQLite (for local storage)
 - Styling: CSS , Material UI
+
+# Testing
+- May need a re-seed command when testing locally
