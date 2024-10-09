@@ -1,4 +1,4 @@
-const { sauces, funkopops } = require("./seedData.js");
+const { funkopops } = require("./seedData.js");
 
 const { sequelize } = require("./db");
 const { FunkoPop } = require("./models");
