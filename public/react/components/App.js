@@ -55,6 +55,7 @@ export const App = () => {
   }, []);
 
   return (
+<<<<<<< HEAD
     <>
       {!view ? (
         <>
@@ -98,4 +99,27 @@ export const App = () => {
       )}
     </>
   );
+=======
+	<>
+	{!view ? (<> <main>
+		<h1>FunkoPop Store</h1>
+		<h2>All things 🔥</h2>
+		<h2>{funko.name}</h2>
+		<img src={funko.image}></img>
+		<Button onClick ={() => {setView(true)}}>Back Home</Button>
+    <Button onClick ={() => {fetchDeletePage(funko.id); setView(true)}}>DELETE</Button>
+    <FunkoUpdateForm id={funko.id}/>
+
+	  </main></>)
+	  :
+    (<><main>
+      <h1>FunkoPop Store</h1>
+      <h2>All things 🔥</h2>
+      <FunkoForm />
+      <SaucesList fetchPage={fetchPage} sauces={sauces} />
+      <FunkoList fetchPage={fetchPage}  funkoPops={funkoPops} fetchDeletePage={fetchDeletePage} />
+
+    </main></>)}
+	</>);
+>>>>>>> b168d6171cc93a0811fc601bf81fc6721fdde6cb
 };
