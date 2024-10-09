@@ -80,7 +80,7 @@ export const App = () => {
 		<h1>FunkoPop Store</h1>
 		<h2>All things 🔥</h2>
 		<h2>{funko.name}</h2>
-		<img src={funko.image}></img>
+		{/* <img src={funko.image}></img> */}
 		<Button onClick ={() => {setView(true)}}>Back Home</Button>
     <Button onClick ={() => {fetchDeletePage(funko.id); setView(true)}}>DELETE</Button>
     <FunkoUpdateForm id={funko.id}/>
