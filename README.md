@@ -5,7 +5,7 @@
 ## Features
 
 - View Funkopops: Browse a list of all the Funkopops in your collection.
-- Add Funkopops: Add new Funkopops to your inventory, including details like name, series, number, and condition.
+- Add Funkopops: Add new Funkopops to your inventory, including details like name, description, price, category, image
 - Edit Funkopops: Update the details of any Funkopop in your collection.
 - Delete Funkopops: Remove Funkopops from your collection that you no longer own.
 - Search: Quickly find specific Funkopops in your collection.
