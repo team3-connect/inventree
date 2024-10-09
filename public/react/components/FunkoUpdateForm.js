@@ -1,14 +1,9 @@
 import React, { useState } from "react";
 import { Funko } from "./Funko";
 import apiURL from "../api";
+import { funkopops } from "../../../server/seedData";
 export const FunkoUpdateForm = ({id}) => {
-    const [funko, setFunko] = useState({
-      name: "",
-      description: "",
-      price: "",
-      category: "",
-      image: "",
-    });
+    const [funko, setFunko] = useState(funkopops);
   
     function handleChange(e) {
       setFunko({ ...funko, [e.target.name]: e.target.value });
@@ -43,43 +38,66 @@ export const FunkoUpdateForm = ({id}) => {
       }
       }
   
-    return (
-      <div>
-        <h1>Update Funko</h1>
-        <form onSubmit={handleSubmit}>
-          <input
-            name="name"
-            value={funko.name}
-            onChange={handleChange}
-            placeholder="Name"
-          />
-          <input
-            name="description"
-            value={funko.description}
-            onChange={handleChange}
-            placeholder="Description"
-          />
-          <input
-            name="price"
-            value={funko.price}
-            onChange={handleChange}
-            placeholder="Price"
-          />
-          <input
-            name="category"
-            value={funko.category}
-            onChange={handleChange}
-            placeholder="Category"
-          />
-          <input
-            name="image"
-            value={funko.image}
-            onChange={handleChange}
-            placeholder="Image"
-          />
-          <button type="submit">Update Funko</button>
-        </form>
-      </div>
-    );
+    return( <form onSubmit={handleSubmit}>
+
+    <input
+
+      name="name"
+
+      value={funko.funkoPops}
+
+      onChange={handleChange}
+       placeholder="name"
+
+    />
+
+    <textarea
+
+      name="description"
+
+      value={funko.description}
+
+      onChange={handleChange}
+       placeholder="description"
+    ></textarea>
+     <textarea
+
+name="price"
+
+value={funko.price}
+
+onChange={handleChange}
+ placeholder="price"
+
+></textarea>
+<textarea
+
+name="category"
+
+value={funko.category}
+
+onChange={handleChange}
+ placeholder="Category"
+
+></textarea>
+<textarea
+
+name="image"
+
+value={funko.image}
+
+onChange={handleChange}
+ placeholder="Image"
+
+></textarea>
+
+
+    <button type="submit">Update Item</button>
+
+  </form>
+
+);
+
+
   };
   
