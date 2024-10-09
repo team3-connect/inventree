@@ -1,35 +1,19 @@
 # Inventree App
 
-## Tier I: MVP Application
+- Welcome to Inventree, an inventory management app specifically designed to log and manage Funkopop collectibles! This application uses React for the frontend and Express.js for the backend, providing a full-stack solution for managing Funkopops.
 
-### View All Items in Inventory
+## Features
 
-- Sequelize Model for Item
-- Attributes: Name, Description, Price, Category, Image
-- Express Route to GET all Items
-- `GET /api/items`
-- Front-end View for all Items
-- Displays all inventory items to the user ### View an Individual Item
-- Express Route to GET one Item
-- `GET /api/items/:id`
-- Front-end View for one Item
-- Click to see detailed view of a specific item
+- View Funkopops: Browse a list of all the Funkopops in your collection.
+- Add Funkopops: Add new Funkopops to your inventory, including details like name, series, number, and condition.
+- Edit Funkopops: Update the details of any Funkopop in your collection.
+- Delete Funkopops: Remove Funkopops from your collection that you no longer own.
+- Search: Quickly find specific Funkopops in your collection.
+- Responsive Design: Optimized for desktop and mobile devices.
 
-## Tier II: Adding an Item ### Adding an Item
+## Tech Stack
 
-- Front-end form to Add an Item
-- Form to input Name, Description, Price, Category, Image
-- Express Route to ADD the Item
-- `POST /api/items`
-- Form or Fetch request to add item when form is submitted
-- Submits the new item to the backend
-
-## Tier III: Deleting an Item
-
-### Removing an Item from Inventory
-
-- Delete Button on Single Item View
-- Button to remove the item
-- Express Route to DELETE the Item
-- `DELETE /api/items/:id`
-- \*\*Fetch Request to Delete Item when Bu
+- Frontend: React.js (Functional components, hooks, and state management)
+- Backend: Express.js
+- Database: SQLite (for local storage)
+- Styling: CSS , Material UI
