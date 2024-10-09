@@ -40,6 +40,7 @@ export const App = () => {
     }
   }
   async function fetchPage(id){
+    try{
     const response = await fetch(`${apiURL}/funkopops/${id}`);
    const data = await response.json()
     setFunko(data)
@@ -49,15 +50,22 @@ export const App = () => {
     console.log(`${apiURL}/funkopops/${id}`)
     console.log(data.name)
     setView(false)
+  } catch (err) {
+    console.log("Oh no an error! ", err);
+  }
   }
   
   async function fetchDeletePage(id){
+    try{
     const url = `${apiURL}/funkopops/${id}`
     const response = await fetch(url, {method: 'DELETE'});
     const redirect = await fetch(`${apiURL}/funkopops`)
     const pagesData = await redirect.json()
     setFunkoPops(pagesData)
     console.log(pagesData)
+  } catch (err) {
+    console.log("Oh no an error! ", err);
+  }
     
   }
 
