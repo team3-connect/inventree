@@ -1,33 +1,15 @@
 module.exports = {
-  sauces: [
-    {
-      name: "Sriracha",
-      image:
-        "https://funko.com/dw/image/v2/BGTS_PRD/on/demandware.static/-/Sites-funko-master-catalog/default/dw43b29bcd/images/funko/upload/81866_BMBegins_FearGasBatman_POP_GLAM_FIGURE-WEB.png?sw=800&sh=800",
-    },
-    {
-      name: "Franks",
-      image:
-        "https://cdn.streamelements.com/uploads/1887a0da-3642-4795-b5f5-774d5b377e52.gif",
-    },
-    {
-      name: "Tobasco",
-      image:
-        "https://64.media.tumblr.com/1564fcf74adc3fe6542c34b6a1f05de1/tumblr_na9lew0bNS1tha1vgo1_r1_250.gif",
-    },
-  ],
   funkopops: [
     {
       name: "Spock",
-      price: 109.95,
-      description:
-        "Just for K",
+      price: "$" + 109.95,
+      description: "Just for K",
       category: "K's things",
-        image: "https://m.media-amazon.com/images/I/41sTmrgWUdL._AC_SL1000_.jpg"
+      image: "https://m.media-amazon.com/images/I/41sTmrgWUdL._AC_SL1000_.jpg",
     },
     {
       name: "Mens Casual Premium Slim Fit T-Shirts ",
-      price: 22.3,
+      price: "$" + 22.3,
       description:
         "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
       category: "men's clothing",
@@ -36,7 +18,7 @@ module.exports = {
     },
     {
       name: "Mens Cotton Jacket",
-      price: 55.99,
+      price: "$" + 55.99,
       description:
         "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
       category: "men's clothing",
@@ -44,7 +26,7 @@ module.exports = {
     },
     {
       name: "Mens Casual Slim Fit",
-      price: 15.99,
+      price: "$" + 15.99,
       description:
         "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
       category: "men's clothing",
@@ -52,7 +34,7 @@ module.exports = {
     },
     {
       name: "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
-      price: 695,
+      price: "$" + 695,
       description:
         "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
       category: "jewelery",
@@ -60,7 +42,7 @@ module.exports = {
     },
     {
       name: "Solid Gold Petite Micropave ",
-      price: 168,
+      price: "$" + 168,
       description:
         "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
       category: "jewelery",
@@ -68,7 +50,7 @@ module.exports = {
     },
     {
       name: "White Gold Plated Princess",
-      price: 9.99,
+      price: "$" + 9.99,
       description:
         "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
       category: "jewelery",
@@ -76,7 +58,7 @@ module.exports = {
     },
     {
       name: "Pierced Owl Rose Gold Plated Stainless Steel Double",
-      price: 10.99,
+      price: "$" + 10.99,
       description:
         "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
       category: "jewelery",
@@ -84,7 +66,7 @@ module.exports = {
     },
     {
       name: "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
-      price: 64,
+      price: "$" + 64,
       description:
         "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
       category: "electronics",
