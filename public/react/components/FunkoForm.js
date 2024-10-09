@@ -34,8 +34,6 @@ export const FunkoForm = () => {
         category: "",
         image: "",
       });
-
-
     } catch (error) {
       console.error(error);
     }
