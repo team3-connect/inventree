@@ -1,4 +1,4 @@
-# MVP Inventory Management Application
+# Inventree App
 
 ## Tier I: MVP Application
 
