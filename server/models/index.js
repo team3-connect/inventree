@@ -1,12 +1,7 @@
-const {Sequelize} = require('sequelize')
-const {sequelize} = require('../db')
-
-// IMPORT
-const { Funkopop } = require("./Funkopop");
-
-// ASSOCIATIONS
+const { Sequelize } = require("sequelize");
+const { sequelize } = require("../db");
 
 module.exports = {
   db: sequelize,
-  Funkopop,
+  FunkoPop,
 };
