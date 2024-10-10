@@ -3,6 +3,7 @@
   box-sizing: border-box;
   /* background-color: rgb(223, 223, 223); */
 }
+/* Main View styling */
 .funkoimage{
   width: 200px;
 }
@@ -10,6 +11,7 @@
  width: 250px;
  border: solid;
 }
+/* Single Page View styling */
 .singlePageMain{
  padding: 50px;
 }
