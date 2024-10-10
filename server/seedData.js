@@ -180,10 +180,9 @@ module.exports = {
     {
       name: "Pop! Boo with Hood Up",
       description: "Celebrate the 20th Anniversary of Disney Pixar’s Monster’s Inc. with a Pop! The original mission was to scare until Mike and Sulley got a scare of their own. Bring home Pop! Boo with her hood up to complete your collection of Monster’s Inc. and celebrate the 20th Anniversary of the movie’s release! Vinyl figure is approximately 3.5-inches tall",
-      price: "$" + 214.99,
+      price: "$" + 3214.99,
       category: "K's",
       image: "https://funko.com/dw/image/v2/BGTS_PRD/on/demandware.static/-/Sites-funko-master-catalog/default/dwb75a640b/images/funko/57741-1.png?sw=800&sh=800"
-    }
-    
+    },
   ],
 };
