@@ -6,6 +6,7 @@ import { FunkoUpdateForm } from "./FunkoUpdateForm";
 
 // import and prepend the api url to any fetch calls
 import apiURL from "../api";
+import { Navbar } from "./Navbar";
 
 console.log(apiURL);
 export const App = () => {
@@ -87,7 +88,7 @@ export const App = () => {
           <main>
             <h1>FunkoPop Store</h1>
             <h2>All things 🔥</h2>
-            <FunkoForm />
+            <Navbar />
             <FunkoList
               fetchPage={fetchPage}
               funkoPops={funkoPops}
