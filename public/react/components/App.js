@@ -5,6 +5,11 @@ import { Navigation } from "./Navigation";
 import { OneFunko } from "./OneFunko";
 import { FormView } from "./FormView";
 import { FunkoListView } from "./FunkoListView";
+import { FunkoUpdateForm } from "./FunkoUpdateForm";
+import { SinglePageView } from "./SinglePageView";
+import {LoremParagraph} from "./LoremParagraph"
+import Button from "@mui/material/Button";
+
 
 // import and prepend the api url to any fetch calls
 import apiURL from "../api";
@@ -70,12 +75,19 @@ export const App = () => {
       ) : view === 2 ? (
         <>
             <Navigation setView={setView}/>
-            <OneFunko 
+            {/* <OneFunko 
               funko={funko}
               setFunko={setFunko}
               fetchDeletePage={fetchDeletePage}
               setView={setView}
-            />
+            /> */}
+
+<main className="spMainEverything">
+
+            <SinglePageView funko={funko} fetchDeletePage={fetchDeletePage} id={funko.id} setFunko={setView}/>
+
+          </main>
+
         </>
       ) :  view === 3 ? ( <>
           <FormView />

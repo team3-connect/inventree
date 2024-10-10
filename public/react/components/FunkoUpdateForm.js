@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Funko } from "./Funko";
 import apiURL from "../api";
+import Button from '@mui/material/Button';
 import { funkopops } from "../../../server/seedData";
 import Button from "@mui/material/Button";
 import FormControl from '@mui/material/FormControl';
@@ -41,7 +42,7 @@ export const FunkoUpdateForm = ({ id }) => {
     }
   }
 
-  return (<form onSubmit={handleSubmit}>
+  return (<form onSubmit={handleSubmit} className="funkoUpdateForm">
 
     <div className="">
       <FormControl>
@@ -101,15 +102,57 @@ export const FunkoUpdateForm = ({ id }) => {
 
     <Button
       onClick={() => {
-      fetchDeletePage(funko.id);
-      setView(1)
-    }}
-              type="submit"
-              variant="outlined"
-              className="delete-btn"
-            >Update
+        fetchDeletePage(funko.id);
+        setView(1)
+      }}
+      type="submit"
+      variant="outlined"
+      className="delete-btn"
+    >Update
     </Button>
 
+    {/* <textarea
+
+        name="description"
+
+        value={funko.description}
+
+        onChange={handleChange}
+        placeholder="description"
+      ></textarea>
+      <textarea
+
+  name="price"
+
+  value={funko.price}
+
+  onChange={handleChange}
+  placeholder="price"
+
+  ></textarea>
+  <textarea
+
+  name="category"
+
+  value={funko.category}
+
+  onChange={handleChange}
+  placeholder="Category"
+
+  ></textarea>
+  <textarea
+
+  name="image"
+
+  value={funko.image}
+
+  onChange={handleChange}
+  placeholder="Image"
+
+  ></textarea>
+  </section>
+      <Button type="submit">Update Item</Button>
+  */}
   </form>
 
   );
