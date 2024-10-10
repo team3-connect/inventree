@@ -159,5 +159,6 @@ module.exports = {
       category: "women's clothing",
       image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
     },
+    
   ],
 };

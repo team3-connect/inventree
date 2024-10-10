@@ -84,6 +84,11 @@
   justify-items: center;
   align-items: center;
 }
+
+.alignCenter {
+  text-align: center;
+}
+
 .some-page-wrapper {
   margin: 0 auto;
   padding: 3rem;
