@@ -64,13 +64,14 @@ export const App = () => {
     <>
       { view === 1 ? (
         <>
-            <Navigation setView={setView} />
-
-            <FunkoListView 
-              funkoPops={funkoPops}
-              fetchPage={fetchPage}
-              fetchDeletePage={fetchDeletePage}
-            />
+            <div>
+              <Navigation setView={setView} />
+              <FunkoListView
+                funkoPops={funkoPops}
+                fetchPage={fetchPage}
+                fetchDeletePage={fetchDeletePage}
+              />
+            </div>
         </>
       ) : view === 2 ? (
         <>

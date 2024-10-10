@@ -6,8 +6,7 @@ export const FunkoListView = ({fetchPage, funkoPops, fetchDeletePage}) => {
     return (
 
         <>
-            <div className="list-container">
-                <h1>LISTVIEW</h1>
+            <div className="">
                 <FunkoList
                     funkoPops={funkoPops}
                     fetchPage={fetchPage}

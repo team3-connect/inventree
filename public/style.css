@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+
   /* background-color: rgb(223, 223, 223); */
 }
 /* Main View styling */
@@ -72,6 +78,9 @@
   
 }
 
+.font-copy {
+  font-size: large;
+}
 
 
 /* columns cards */
@@ -81,11 +90,15 @@
   justify-items: center;
   align-items: center;
 }
+
+.alignCenter {
+  text-align: center;
+}
+
 .some-page-wrapper {
   margin: 0 auto;
   padding: 3rem;
-  columns: 3;
-
+  align-items: center;
 }
 
 .row {
@@ -94,6 +107,7 @@
   flex-wrap: wrap;
   width: 100%;
   row-gap: 25px;
+  column-gap: 25px;
 
 }
 
@@ -104,3 +118,88 @@
   flex: 1;
 }
 /* wrap 3 columns for cards */
+
+.p-3 {
+  padding: 3rem;
+  margin: 0 auto;
+}
+
+.add-form {
+  padding: 3rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(128, 128, 128, 0.5);
+}
+
+/* From Uiverse.io by vikiWayne */ 
+.add-button {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #2c9caf;
+  transition: all 1000ms;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #2c9caf;
+}
+
+.add-button:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid #70bdca;
+  box-shadow: 4px 5px 17px -4px #268391;
+}
+
+.add-button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #2c9caf;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+.list-button {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: black;
+  transition: all 1000ms;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #2c9caf;
+}
+
+.list-button:hover {
+  transform: scale(1.1);
+  outline: 2px solid #70bdca;
+  box-shadow: 4px 5px 17px -4px #268391;
+}
+
+.list-button::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}

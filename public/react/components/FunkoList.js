@@ -10,17 +10,14 @@ import Button from '@mui/material/Button';
 export const FunkoList = ({ funkoPops, fetchPage, fetchDeletePage }) => {
   return (
     <>
-    <div className="alignAllcenter">
-        <h1>FunkoPop Store</h1>
-        <h2>All FUNKOPOPS 🔥</h2>
-        </div>
+
+        <h3 className="alignCenter">Funk o Shop</h3>
       <div className="some-page-wrapper">
-        
         <section className="row">
           {funkoPops.map((funkoPop, idx) => {
             return (<div>
               <section className="column">
-                <Card sx={{ width: 300}}>
+                <Card sx={{ width: 345, height: 300}}>
                   <CardMedia
                     sx={{ height: 140 }}
                     image={funkoPop.image}
@@ -31,15 +28,15 @@ export const FunkoList = ({ funkoPops, fetchPage, fetchDeletePage }) => {
                       {funkoPop.name}
                     </Typography>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                      {funkoPop.price}
+                      <p className="font-copy">{funkoPop.price}</p>
                     </Typography>
                   </CardContent>
                   <CardActions>
-                  <Button variant="outlined" size="small" className='delete' 
+                  <Button variant="outlined" size="small" className='list-button'
                   onClick={() => { fetchDeletePage(funkoPop.id); }}>Delete</Button>
-                <Button variant="outlined" size="small" className="pageNav"
-                 
-                  onClick={() => fetchPage(funkoPop.id)}>GO</Button>
+                <Button variant="outlined" size="small" className="list-button"
+                  
+                  onClick={() => fetchPage(funkoPop.id)}>View Funko</Button>
                   </CardActions>
                 </Card>
                 {/* <a onClick={() => fetchPage(funkoPop.id)}>
