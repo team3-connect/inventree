@@ -3,6 +3,8 @@ import { FunkoList } from "./FunkoList";
 import Button from "@mui/material/Button";
 import { FunkoForm } from "./FunkoForm";
 import { FunkoUpdateForm } from "./FunkoUpdateForm";
+import { SinglePageView } from "./SinglePageView";
+import {LoremParagraph} from "./LoremParagraph"
 
 // import and prepend the api url to any fetch calls
 import apiURL from "../api";
@@ -59,27 +61,23 @@ export const App = () => {
       {!view ? (
         <>
           {" "}
-          <main>
-            <h1>FunkoPop Store</h1>
+          <main className="spMainEverything">
+            <section className="possHeader">
+            <h1 className="singlePageFunkoHead"><b>FunkoPop Store</b></h1>
             <h2>All things 🔥</h2>
-            <h2>{funko.name}</h2>
-            <img src={funko.image}></img>
-            <Button
-              onClick={() => {
-                setView(true);
-              }}
-            >
+            </section>
+            <SinglePageView funko={funko} fetchDeletePage={fetchDeletePage} id={funko.id} setFunko={setView}/>
+            <div className="spMainButtonDiv">
+            <Button onClick={() => { setView(true);}}>
               Back Home
             </Button>
-            <Button
-              onClick={() => {
-                fetchDeletePage(funko.id);
-                setView(true);
-              }}
-            >
+            <Button onClick={() => { fetchDeletePage(funko.id); setView(true);}}>
               DELETE
             </Button>
-            <FunkoUpdateForm id={funko.id} />
+            </div>
+            <div>
+            <FunkoUpdateForm id={funko.id}/>
+            </div>
           </main>
         </>
       ) : (
