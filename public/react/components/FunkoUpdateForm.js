@@ -39,7 +39,7 @@ export const FunkoUpdateForm = ({id}) => {
       }
       }
   
-    return( <form onSubmit={handleSubmit} className="funkoUpdateForm">
+    return( <form onSubmit={handleSubmit} className="funkoUpdateForm"><section>
 
     <textarea
 
@@ -91,6 +91,7 @@ onChange={handleChange}
  placeholder="Image"
 
 ></textarea>
+</section>
     <Button type="submit">Update Item</Button>
 
   </form>
