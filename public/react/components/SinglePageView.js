@@ -3,32 +3,60 @@ import { Funko } from "./Funko";
 import Button from '@mui/material/Button';
 import { FunkoUpdateForm } from "./FunkoUpdateForm";
 import {LoremParagraph} from "./LoremParagraph"
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 
-export const SinglePageView = ({ funkoPops, fetchPage, fetchDeletePage, funko, id, setView }) => {
+export const SinglePageView = ({ funkoPops, fetchPage, fetchDeletePage, funko, setView, view }) => {
     return(<>
         <main className="singlePageMain">
-        <section className="possHeader">
-            <h1><b>FunkoPop Store</b></h1>
-            <p className="singlePageFunkoHead">View One 🔥</p>
+            <section>
+            <Card sx={{ width: 600 }}>
+      <CardMedia className="img-resize"
+        sx={{ height: 200, width: 400}}
+        image={funko.image}
+        title={funko.name}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+            {funko.name}
+          {funko.price}
+        </Typography>
+        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+          {funko.description}
+        </Typography>
+      </CardContent>
+      <CardActions>
+      <Button onClick={() => { setView(1);}}>
+              Back Home
+            </Button>
+            <Button onClick={() => { fetchDeletePage(funko.id); setView(1);}}>
+              DELETE
+            </Button>
+      </CardActions>
+    </Card>
             </section>
-
-            <section className="singlePageinfo">
+    
+            <section className="singlePageinfo" style={{paddingTop: "10px"}}>
                 <div >
                     <img className="singlePageImgDiv" src={funko.image}/>
                 </div>
                 <div className="singlePageNamePrice">
-                    <h1><b>{funko.name}</b></h1>
-                    <h1><b>{funko.price}</b></h1>
+                    <p><b>{funko.name}</b></p>
+                    <p><b>{funko.price}</b></p>
                 </div>
                 <div className="singlePageDescription">
                     <LoremParagraph/>
                 </div>
                             <div className="spMainButtonDiv">
-            <Button onClick={() => { setView(true);}}>
+            <Button onClick={() => { setView(1);}}>
               Back Home
             </Button>
-            <Button onClick={() => { fetchDeletePage(funko.id); setView(true);}}>
+            <Button onClick={() => { fetchDeletePage(funko.id); setView(1);}}>
               DELETE
             </Button>
             </div>
