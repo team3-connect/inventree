@@ -87,8 +87,9 @@ export const App = () => {
             <SinglePageView 
               funko={funko} 
               fetchDeletePage={fetchDeletePage} 
-              id={funko.id} 
+              setFunko={setFunko}
               setView={setView}
+              view={view}
             />
 
           </main>

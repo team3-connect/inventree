@@ -10,11 +10,12 @@ import Button from '@mui/material/Button';
 export const FunkoList = ({ funkoPops, fetchPage, fetchDeletePage }) => {
   return (
     <>
-      <div className="some-page-wrapper">
-        <div>
-          <h1>FunkoPop Store</h1>
-          <h2>All FUNKOPOPS 🔥</h2>
+    <div className="alignAllcenter">
+        <h1>FunkoPop Store</h1>
+        <h2>All FUNKOPOPS 🔥</h2>
         </div>
+      <div className="some-page-wrapper">
+        
         <section className="row">
           {funkoPops.map((funkoPop, idx) => {
             return (<div>
