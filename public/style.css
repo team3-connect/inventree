@@ -68,12 +68,16 @@
   width: 250px;
 }
 
+.font-copy {
+  font-size: large;
+}
 
 
 /* columns cards */
 .some-page-wrapper {
   margin: 0 auto;
   padding: 3rem;
+  align-items: center;
 }
 
 .row {
@@ -81,6 +85,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  row-gap: 25px;
+  column-gap: 25px;
+
 }
 
 .column {

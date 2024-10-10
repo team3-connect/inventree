@@ -2,6 +2,7 @@
 
 - Welcome to Inventree, an inventory management app specifically designed to log and manage Funkopop collectibles! This application uses React for the frontend and Express.js for the backend, providing a full-stack solution for managing Funkopops.
 
+
 ## Features
 
 - View Funkopops: Browse a list of all the Funkopops in your collection.
@@ -20,3 +21,11 @@
 
 # Testing
 - May need a re-seed command when testing locally
+- npm run seed
+- npm run test
+
+## Development Setup
+- npm i
+- split terminals
+- npm run server-dev 
+- npm run client-dev

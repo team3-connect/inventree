@@ -19,7 +19,7 @@ export const FunkoList = ({ funkoPops, fetchPage, fetchDeletePage }) => {
           {funkoPops.map((funkoPop, idx) => {
             return (<div>
               <section className="column">
-                <Card sx={{ maxWidth: 345 }}>
+                <Card sx={{ width: 345, height: 300}}>
                   <CardMedia
                     sx={{ height: 140 }}
                     image={funkoPop.image}
@@ -30,15 +30,15 @@ export const FunkoList = ({ funkoPops, fetchPage, fetchDeletePage }) => {
                       {funkoPop.name}
                     </Typography>
                     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                      {funkoPop.description}
+                      <p className="font-copy">{funkoPop.price}</p>
                     </Typography>
                   </CardContent>
                   <CardActions>
-                  <Button variant="outlined" size="small" className='delete' style={{ borderRadius: "10px", width: "100px" }}
+                  <Button variant="outlined" size="small" className='delete'
                   onClick={() => { fetchDeletePage(funkoPop.id); }}>Delete</Button>
                 <Button variant="outlined" size="small" className="pageNav"
-                  style={{ borderRadius: "10px", width: "200px" }}
-                  onClick={() => fetchPage(funkoPop.id)}>{funkoPop.name}</Button>
+                  
+                  onClick={() => fetchPage(funkoPop.id)}>View Funko</Button>
                   </CardActions>
                 </Card>
                 {/* <a onClick={() => fetchPage(funkoPop.id)}>

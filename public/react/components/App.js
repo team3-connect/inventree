@@ -88,7 +88,7 @@ export const App = () => {
               funko={funko} 
               fetchDeletePage={fetchDeletePage} 
               id={funko.id} 
-              setFunko={setView}
+              setView={setView}
             />
 
           </main>

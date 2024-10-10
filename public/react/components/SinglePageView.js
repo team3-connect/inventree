@@ -25,10 +25,10 @@ export const SinglePageView = ({ funkoPops, fetchPage, fetchDeletePage, funko, i
                     <LoremParagraph/>
                 </div>
                             <div className="spMainButtonDiv">
-            <Button onClick={() => { setView(true);}}>
+            <Button onClick={() => { setView(1);}}>
               Back Home
             </Button>
-            <Button onClick={() => { fetchDeletePage(funko.id); setView(true);}}>
+            <Button onClick={() => { fetchDeletePage(funko.id); setView(1);}}>
               DELETE
             </Button>
             </div>
