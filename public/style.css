@@ -3,10 +3,61 @@
   box-sizing: border-box;
   /* background-color: rgb(223, 223, 223); */
 }
-img{
+/* Main View styling */
+.funkoimage{
   width: 200px;
 }
 .container{
  width: 250px;
  border: solid;
+}
+/* Single Page View styling */
+.possHeader{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: gainsboro; */
+}
+.singlePageFunkoHead{
+  font-size: 25px;
+}
+
+.singlePageMain{
+ padding-bottom: 25px;
+ /* background-color: blanchedalmond; */
+}
+.spMainEverything{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+.singlePageinfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.singlePageImgDiv{
+  width: 400px;
+}
+.singlePageNamePrice{
+  display: flex;
+  flex-direction:row;
+  justify-content:space-around;
+  width: 100%;
+}
+.singlePageDescription{
+  width: 600px;
+  padding: 10px;
+  border-top: 2px solid #222222
+}
+.loremPara{
+  line-height: 2.3;
+  text-wrap: wrap;
+  text-align: center;
+}
+.funkoUpdateForm{
+  padding: 25px;
+  width: fit-content;
 }

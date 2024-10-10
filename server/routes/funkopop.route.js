@@ -43,8 +43,7 @@ router.put('/:id', async (req, res, next) => {
   try{
     const updateFunko = await FunkoPop.update(req.body, { where: { id: req.params.id } })
     const funkopops = await FunkoPop.findAll()
-    console.log(updateFunko)
-    console.log(req.body)
+    console.log(`**from .route file, PUT: ${updateFunko}`)
     res.send(funkopops)
 
   }catch(error){

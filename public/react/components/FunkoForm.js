@@ -44,7 +44,7 @@ export const FunkoForm = () => {
   return (
     <div>
       <h1>Add New Funko</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="funkoUpdateForm">
         <input
           name="name"
           value={funko.name}
