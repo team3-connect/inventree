@@ -1,12 +1,22 @@
 const request = require("supertest");
 const express = require("express");
-const { FunkoPop } = require("../models");
+const { FunkoPop, db } = require("../server/models");
+const { funkopops } = require("../server/seedData");
 const app = express();
 
 app.use(express.json());
 
-const funkoRoutes = require("../routes/funkopop.route");
+const funkoRoutes = require("../server/routes/funkopop.route");
 app.use("/funkopops", funkoRoutes);
+
+beforeEach(async () => {
+  await db.sync({ force: true });
+  await FunkoPop.bulkCreate(funkopops);
+});
+
+afterEach(async () => {
+  await db.sync({ force: true });
+});
 
 describe("./funkopops routes", () => {
   test("Testing funkopops endpoints", async () => {
