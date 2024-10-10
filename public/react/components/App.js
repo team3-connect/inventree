@@ -1,31 +1,35 @@
 import React, { useState, useEffect } from "react";
 import { FunkoList } from "./FunkoList";
-import Button from "@mui/material/Button";
 import { FunkoForm } from "./FunkoForm";
+import { Navigation } from "./Navigation";
+import { OneFunko } from "./OneFunko";
+import { FormView } from "./FormView";
+import { FunkoListView } from "./FunkoListView";
 import { FunkoUpdateForm } from "./FunkoUpdateForm";
 import { SinglePageView } from "./SinglePageView";
 import {LoremParagraph} from "./LoremParagraph"
+import Button from "@mui/material/Button";
+
 
 // import and prepend the api url to any fetch calls
 import apiURL from "../api";
-import { Navbar } from "./Navbar";
+import { OneFunko } from "./OneFunko";
 
-console.log(apiURL);
 export const App = () => {
+
   const [funkoPops, setFunkoPops] = useState([]);
   const [funko, setFunko] = useState([]);
-  const [view, setView] = useState(true);
+  const [view, setView] = useState(1);
+
 
   async function fetchFunkos() {
     try {
-      console.log(apiURL);
       const response = await fetch(`${apiURL}/funkopops`);
       const funkoData = await response.json();
 
       setFunkoPops(funkoData);
-      console.log(funkoPops);
     } catch (err) {
-      console.log("Oh no an error! ", err);
+      console.log("Oh an error fetching ALLFUNKOS! ", err);
     }
   }
 
@@ -34,9 +38,9 @@ export const App = () => {
       const response = await fetch(`${apiURL}/funkopops/${id}`);
       const data = await response.json();
       setFunko(data);
-      setView(false);
+      setView(2);
     } catch (err) {
-      console.log("Oh no an error! ", err);
+      console.log("Oh no an error fetching a SINGLE funko! ", err);
     }
   }
 
@@ -47,9 +51,8 @@ export const App = () => {
       const redirect = await fetch(`${apiURL}/funkopops`);
       const pagesData = await redirect.json();
       setFunkoPops(pagesData);
-      console.log(pagesData);
     } catch (err) {
-      console.log("Oh no an error! ", err);
+      console.log("Oh no an error DELETING a funko! ", err);
     }
   }
 
@@ -59,42 +62,38 @@ export const App = () => {
 
   return (
     <>
-      {!view ? (
+      { view === 1 ? (
         <>
-          {" "}
-          <main className="spMainEverything">
-            <section className="possHeader">
-            <h1 className="singlePageFunkoHead"><b>FunkoPop Store</b></h1>
-            <h2>All things 🔥</h2>
-            </section>
-            <SinglePageView funko={funko} fetchDeletePage={fetchDeletePage} id={funko.id} setFunko={setView}/>
-            <div className="spMainButtonDiv">
-            <Button onClick={() => { setView(true);}}>
-              Back Home
-            </Button>
-            <Button onClick={() => { fetchDeletePage(funko.id); setView(true);}}>
-              DELETE
-            </Button>
-            </div>
-            <div>
-            <FunkoUpdateForm id={funko.id}/>
-            </div>
-          </main>
-        </>
-      ) : (
-        <>
-          <main>
-            <h1>FunkoPop Store</h1>
-            <h2>All things 🔥</h2>
-            <Navbar />
-            <FunkoList
-              fetchPage={fetchPage}
+            <Navigation setView={setView} />
+
+            <FunkoListView 
               funkoPops={funkoPops}
+              fetchPage={fetchPage}
               fetchDeletePage={fetchDeletePage}
             />
-          </main>
         </>
-      )}
+      ) : view === 2 ? (
+        <>
+            <Navigation setView={setView}/>
+            {/* <OneFunko 
+              funko={funko}
+              setFunko={setFunko}
+              fetchDeletePage={fetchDeletePage}
+              setView={setView}
+            /> */}
+
+<main className="spMainEverything">
+
+            <SinglePageView funko={funko} fetchDeletePage={fetchDeletePage} id={funko.id} setFunko={setView}/>
+
+          </main>
+
+        </>
+      ) :  view === 3 ? ( <>
+          <FormView />
+      </>
+      ) : null
+    }
     </>
   );
 };

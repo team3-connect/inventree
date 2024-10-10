@@ -16,15 +16,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 25px;
-  padding-top: 30px;
+  /* background-color: gainsboro; */
 }
 .singlePageFunkoHead{
-  font-size: 35pt;
+  font-size: 25px;
 }
+
 .singlePageMain{
- padding-top: 25px;
  padding-bottom: 25px;
+ /* background-color: blanchedalmond; */
 }
 .spMainEverything{
   display: flex;
@@ -44,9 +44,8 @@
 .singlePageNamePrice{
   display: flex;
   flex-direction:row;
-  justify-content:space-between;
+  justify-content:space-around;
   width: 100%;
-  padding: 25px;
 }
 .singlePageDescription{
   width: 600px;
@@ -54,7 +53,7 @@
   border-top: 2px solid #222222
 }
 .loremPara{
-  line-height: 1.5;
+  line-height: 2.3;
   text-wrap: wrap;
   text-align: center;
 }
