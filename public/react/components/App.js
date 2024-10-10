@@ -62,9 +62,10 @@ export const App = () => {
         <>
           {" "}
           <main className="spMainEverything">
-            
-            <h1>FunkoPop Store</h1>
+            <section className="possHeader">
+            <h1 className="singlePageFunkoHead"><b>FunkoPop Store</b></h1>
             <h2>All things 🔥</h2>
+            </section>
             <SinglePageView funko={funko} fetchDeletePage={fetchDeletePage} id={funko.id} setFunko={setView}/>
             <div className="spMainButtonDiv">
             <Button onClick={() => { setView(true);}}>
