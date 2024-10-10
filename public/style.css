@@ -9,7 +9,8 @@
 }
 .container{
  width: 250px;
- border: solid;
+ display: flex;
+
 }
 /* Single Page View styling */
 .possHeader{
@@ -47,6 +48,7 @@
   justify-content:space-around;
   width: 100%;
 }
+
 .singlePageDescription{
   width: 600px;
   padding: 10px;
@@ -61,3 +63,30 @@
   padding: 25px;
   width: fit-content;
 }
+
+.img-resize {
+  width: 250px;
+}
+
+
+
+/* columns cards */
+.some-page-wrapper {
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+/* wrap 3 columns for cards */
