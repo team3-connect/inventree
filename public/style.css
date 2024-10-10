@@ -3,13 +3,39 @@
   box-sizing: border-box;
   /* background-color: rgb(223, 223, 223); */
 }
+
 /* Main View styling */
-.funkoimage{
-  width: 200px;
+.funkoimage {
+  width: 200px
 }
-.container{
- width: 250px;
- border: solid;
+
+.container {
+  padding: 3rem;
+  margin: 0 auto;
+}
+
+.box {
+  padding: 3rem;
+}
+
+.input-items {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.input-container {
+  padding: 3rem;
+  margin: 0 auto;
+  width: 75%;
+  background-color: rgba(188, 126, 45, 0.5);
+}
+
+.mt-3 {
+  margin-top: 15px;
+}
+
+.mt-1 {
+  margin-top: 5px;
 }
 /* Single Page View styling */
 .possHeader{
