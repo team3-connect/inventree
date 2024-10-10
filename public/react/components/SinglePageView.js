@@ -19,7 +19,6 @@ export const SinglePageView = ({ funkoPops, fetchPage, fetchDeletePage, funko, i
                 <div className="singlePageDescription">
                     <LoremParagraph/>
                 </div>
-            <FunkoUpdateForm id={funko.id}/>
             </section>
         </main>
     </>)

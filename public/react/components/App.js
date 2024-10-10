@@ -74,7 +74,9 @@ export const App = () => {
               DELETE
             </Button>
             </div>
-
+            <div>
+            <FunkoUpdateForm id={funko.id}/>
+            </div>
           </main>
         </>
       ) : (
