@@ -4,7 +4,6 @@ const { FunkoPop } = require("../models");
 const { funkopops } = require("../seedData");
 const { where } = require("sequelize");
 
-// GET /sauce
 router.get("/", async (req, res, next) => {
   try {
     const funkopops = await FunkoPop.findAll();
