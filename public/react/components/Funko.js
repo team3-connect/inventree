@@ -5,7 +5,7 @@ export const Funko = (props) => {
     <>
       <h3>{props.funkoPop.name}</h3>
       {console.log(props.funkoPop.name)}
-      <img src={props.funkoPop.image} alt={props.funkoPop.name} />
+      <img className="funkoimage" src={props.funkoPop.image} alt={props.funkoPop.name} />
     </>
   );
 };

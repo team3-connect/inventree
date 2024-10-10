@@ -40,7 +40,7 @@ export const FunkoUpdateForm = ({id}) => {
   
     return( <form onSubmit={handleSubmit}>
 
-    <input
+    <textarea
 
       name="name"
 

@@ -1,20 +1,19 @@
 module.exports = {
   funkopops: [
     {
-      name: "Spock",
-      price: "$" + 109.95,
-      description: "Just for K",
-      category: "K's things",
-      image: "https://m.media-amazon.com/images/I/41sTmrgWUdL._AC_SL1000_.jpg",
-    },
-    {
       name: "Mens Casual Premium Slim Fit T-Shirts ",
       price: "$" + 22.3,
       description:
         "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
       category: "men's clothing",
-      image:
-        "https://images.hobbydb.com/processed_uploads/catalog_item_photo/catalog_item_photo/image/896486/Sam_%2528with_Candy%2529_Vinyl_Art_Toys_dd2e8e05-1d25-4560-b98b-5dd3a49d1797.jpg",
+      image: "https://funko.com/on/demandware.static/-/Sites-funko-master-catalog/default/dw43b29bcd/images/funko/upload/81866_BMBegins_FearGasBatman_POP_GLAM_FIGURE-WEB.png",
+    },
+    {
+      name: "Spock",
+      price: "$" + 109.95,
+      description: "Just for K",
+      category: "K's things",
+      image: "https://pbs.twimg.com/media/E5aDOj9XoAEhn05.jpg",
     },
     {
       name: "Mens Cotton Jacket",
