@@ -1,11 +1,23 @@
-const { FunkoPop } = require("../server/models");
+const { FunkoPop, db } = require("../server/models");
+
+beforeEach(async () => {
+  await db.sync({ force: true });
+  await FunkoPop.create({
+    name: "Michael Myers",
+    description: "Horror",
+    price: 15.99,
+    category: "Movies",
+    image:
+      "https://funko.com/dw/image/v2/BGTS_PRD/on/demandware.static/-/Sites-funko-master-catalog/default/dw09e66306/images/funko/64908-1.png?sw=800&sh=800",
+  });
+});
 
 describe("FunkoPop Model Test", () => {
   test("Can create a new FunkoPop", async () => {
     const newFunko = await FunkoPop.create({
       name: "Michael Myers",
-      price: "$" + 15.99,
       description: "Horror",
+      price: 15.99,
       category: "Movies",
       image:
         "https://funko.com/dw/image/v2/BGTS_PRD/on/demandware.static/-/Sites-funko-master-catalog/default/dw09e66306/images/funko/64908-1.png?sw=800&sh=800",
@@ -25,13 +37,13 @@ describe("FunkoPop Model Test", () => {
 
   test("Can update a FunkoPop", async () => {
     const updateFunko = await FunkoPop.update(
-      { price: "$" + 19.99 },
+      { price: 19.99 },
       { where: { name: "Michael Myers" } }
     );
     const updatedFunko = await FunkoPop.findOne({
       where: { name: "Michael Myers" },
     });
-    expect(updatedFunko.price).toBe("$" + 19.99);
+    expect(updatedFunko.price).toBe(19.99);
   });
 
   test("Can delete a FunkoPop", async () => {

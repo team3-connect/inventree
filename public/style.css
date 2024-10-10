@@ -9,7 +9,8 @@
 }
 .container{
  width: 250px;
- border: solid;
+ display: flex;
+
 }
 /* Single Page View styling */
 .possHeader{
@@ -45,12 +46,14 @@
   display: flex;
   flex-direction:row;
   justify-content:space-around;
-  width: 100%;
+  font-size: 15pt;
+  width: 90%;
 }
+
 .singlePageDescription{
   width: 600px;
   padding: 10px;
-  border-top: 2px solid #222222
+  border-top: 1px solid #222222
 }
 .loremPara{
   line-height: 2.3;
@@ -61,3 +64,43 @@
   padding: 25px;
   width: fit-content;
 }
+
+.img-resize {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  
+}
+
+
+
+/* columns cards */
+.alignAllcenter{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+.some-page-wrapper {
+  margin: 0 auto;
+  padding: 3rem;
+  columns: 3;
+
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  row-gap: 25px;
+
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+/* wrap 3 columns for cards */
