@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import { Funko } from "./Funko";
 import apiURL from "../api";
 import { funkopops } from "../../../server/seedData";
+import Button from "@mui/material/Button";
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
+import Input from '@mui/material/Input';
+import OutlinedInput from '@mui/material/OutlinedInput';
 
 
 export const FunkoUpdateForm = ({ id }) => {
@@ -38,45 +43,72 @@ export const FunkoUpdateForm = ({ id }) => {
 
   return (<form onSubmit={handleSubmit}>
 
-    <div>
-      <textarea
-        name="name"
-        value={funko.funkoPops}
-        onChange={handleChange}
-        placeholder="name"
-        maxlength="50"
-      ></textarea>
-      <textarea
-        name="description"
-        value={funko.description}
-        onChange={handleChange}
-        placeholder="description"
-        maxlength="254"
-      ></textarea>
-      <textarea
-        name="price"
-        value={funko.price}
-        onChange={handleChange}
-        placeholder="price"
-        maxlength="8"
-      ></textarea>
-      <textarea
-        name="category"
-        value={funko.category}
-        onChange={handleChange}
-        placeholder="Category"
-        maxlength="23"
-      ></textarea>
-      <textarea
-        name="image"
-        value={funko.image}
-        onChange={handleChange}
-        placeholder="Image"
-      ></textarea>
+    <div className="">
+      <FormControl>
+        <InputLabel htmlFor="component-outlined">Name</InputLabel>
+        <OutlinedInput
+          id="component-outlined"
+          label="Name"
+          name="name"
+          maxLength="50"
+          onChange={handleChange}
+        />
+      </FormControl>
+      <FormControl>
+        <InputLabel htmlFor="component-outlined">Description</InputLabel>
+        <OutlinedInput
+          id="component-outlined"
+          label="Description"
+          name="description"
+          maxLength="250"
+          onChange={handleChange}
+        />
+      </FormControl>
+      <FormControl>
+        <InputLabel htmlFor="component-outlined">Price</InputLabel>
+        <OutlinedInput
+          id="component-outlined"
+          defaultValue={funko.price}
+          label="Price"
+          name="price"
+          maxLength="50"
+          onChange={handleChange}
+        />
+      </FormControl>
+      <FormControl>
+        <InputLabel htmlFor="component-outlined">Category</InputLabel>
+        <OutlinedInput
+          id="component-outlined"
+          defaultValue={funko.category}
+          label="Category"
+          name="category"
+          maxLength="50"
+          onChange={handleChange}
+
+        />
+      </FormControl>
+      <FormControl>
+        <InputLabel htmlFor="component-outlined">Image</InputLabel>
+        <OutlinedInput
+          id="component-outlined"
+          label="Image"
+          name="image"
+          maxLength="250"
+          onChange={handleChange}
+        />
+      </FormControl>
     </div>
 
-
-    <button type="submit">Update Item</button>
+    <Button
+      onClick={() => {
+      fetchDeletePage(funko.id);
+      setView(1)
+    }}
+              type="submit"
+              variant="outlined"
+              className="delete-btn"
+            >Update
+    </Button>
 
   </form>
 

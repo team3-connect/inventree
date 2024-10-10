@@ -36,3 +36,36 @@ img {
 .mt-1 {
   margin-top: 5px;
 }
+
+.list-container {
+  padding: 3rem;
+  background-color: orangered;
+  margin: 0 auto;
+}
+
+.funko-item {
+  padding: 3rem;
+  background-color: burlywood;
+  margin: 0 auto;
+}
+
+.funko-content {
+  padding: 3rem;
+  background-color: yellowgreen;
+  display: flex;
+}
+
+.funko-options {
+  background-color: burlywood;
+  padding: 1rem;
+}
+
+.delete-btn {
+  transition-duration: 0.4s;
+  background-color: yellow;
+}
+
+.delete-btn:hover {
+  background-color: red;
+  color: white;
+}
