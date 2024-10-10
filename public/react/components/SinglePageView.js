@@ -15,14 +15,15 @@ export const SinglePageView = ({ funkoPops, fetchPage, fetchDeletePage, funko, s
     return(<>
         <main className="singlePageMain">
             <section>
-            <Card sx={{ width: 400 }}>
-      <CardMedia
-        sx={{ height: 200 }}
+            <Card sx={{ width: 600 }}>
+      <CardMedia className="img-resize"
+        sx={{ height: 200, width: 400}}
         image={funko.image}
         title={funko.name}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
+            {funko.name}
           {funko.price}
         </Typography>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
@@ -39,12 +40,8 @@ export const SinglePageView = ({ funkoPops, fetchPage, fetchDeletePage, funko, s
       </CardActions>
     </Card>
             </section>
-        {/* <section className="possHeader">
-            <h1><b>FunkoPop Store</b></h1>
-            <p className="singlePageFunkoHead">View One 🔥</p>
-            </section> */}
-
-            <section className="singlePageinfo">
+    
+            <section className="singlePageinfo" style={{paddingTop: "10px"}}>
                 <div >
                     <img className="singlePageImgDiv" src={funko.image}/>
                 </div>
