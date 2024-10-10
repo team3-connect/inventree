@@ -84,7 +84,12 @@ export const App = () => {
 
 <main className="spMainEverything">
 
-            <SinglePageView funko={funko} fetchDeletePage={fetchDeletePage} id={funko.id} setFunko={setView}/>
+            <SinglePageView 
+              funko={funko} 
+              fetchDeletePage={fetchDeletePage} 
+              id={funko.id} 
+              setFunko={setView}
+            />
 
           </main>
 
