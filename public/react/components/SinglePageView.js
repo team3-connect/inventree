@@ -8,6 +8,11 @@ import {LoremParagraph} from "./LoremParagraph"
 export const SinglePageView = ({ funkoPops, fetchPage, fetchDeletePage, funko, id, setView }) => {
     return(<>
         <main className="singlePageMain">
+        <section className="possHeader">
+            <h1><b>FunkoPop Store</b></h1>
+            <p className="singlePageFunkoHead">View One 🔥</p>
+            </section>
+
             <section className="singlePageinfo">
                 <div >
                     <img className="singlePageImgDiv" src={funko.image}/>
@@ -19,7 +24,18 @@ export const SinglePageView = ({ funkoPops, fetchPage, fetchDeletePage, funko, i
                 <div className="singlePageDescription">
                     <LoremParagraph/>
                 </div>
+                            <div className="spMainButtonDiv">
+            <Button onClick={() => { setView(true);}}>
+              Back Home
+            </Button>
+            <Button onClick={() => { fetchDeletePage(funko.id); setView(true);}}>
+              DELETE
+            </Button>
+            </div>
             </section>
+
+            <FunkoUpdateForm id={funko.id}/>
+
         </main>
     </>)
 }
