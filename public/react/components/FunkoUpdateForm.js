@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Funko } from "./Funko";
 import apiURL from "../api";
+import Button from '@mui/material/Button';
 import { funkopops } from "../../../server/seedData";
 export const FunkoUpdateForm = ({id}) => {
     const [funko, setFunko] = useState(funkopops);
@@ -38,7 +39,7 @@ export const FunkoUpdateForm = ({id}) => {
       }
       }
   
-    return( <form onSubmit={handleSubmit}>
+    return( <form onSubmit={handleSubmit} className="funkoUpdateForm">
 
     <textarea
 
@@ -90,9 +91,7 @@ onChange={handleChange}
  placeholder="Image"
 
 ></textarea>
-
-
-    <button type="submit">Update Item</button>
+    <Button type="submit">Update Item</Button>
 
   </form>
 
