@@ -2,7 +2,7 @@ module.exports = {
   funkopops: [
     {
       name: "Batman",
-      price: "$" + 22.0,
+      price: "$" + 222.99,
       description: "The dark knight",
       category: "not K's",
       image:
@@ -13,11 +13,11 @@ module.exports = {
       price: "$" + 109.95,
       description: "Just for K",
       category: "K's things",
-      image: "https://pbs.twimg.com/media/E5aDOj9XoAEhn05.jpg",
+      image: "https://funko.com/dw/image/v2/BGTS_PRD/on/demandware.static/-/Sites-funko-master-catalog/default/dwd746b230/images/funko/55996-1.png?sw=800&sh=800",
     },
     {
       name: "Demogorgon",
-      price: "$" + 12.99,
+      price: "$" + 1.99,
       description:
         "Hawkins, Indiana is harboring dangerous and supernatural secrets. Bring home the happenings, characters, and breakthrough moments of Stranger Things with this Pop! Demogorgon in a chilling rift color scheme! Vinyl figure is approximately 4.9-inches tall.",
       category: "Movies & TV",
@@ -26,7 +26,7 @@ module.exports = {
     },
     {
       name: "Katherine",
-      price: "$" + 12.99,
+      price: "$" + 1209.99,
       description:
         "A misadventure in the woods has resulted in the horrifying possession of best friends Angela and Katherine by something truly evil. Will you be able to help Pop! Katherine break free from the demon’s grasp in your The Exorcist: Believer collection? Vinyl figure is approximately 3.8-inches tall.",
       category: "Movies & TV",
@@ -35,7 +35,7 @@ module.exports = {
     },
     {
       name: "Ghost Face",
-      price: "$" + 12.0,
+      price: "$" + 127.99,
       description:
         "Carve out some space for a killer addition to your horror collection! This terrifying Pop! Ghost Face® is ready to take a stab at joining your Scream lineup. Vinyl figure is approximately 3.85-inches tall. ",
       category: "Movies & TV",
@@ -44,7 +44,7 @@ module.exports = {
     },
     {
       name: "Jason Voorhees",
-      price: "$" + 12.0,
+      price: "$" + 99.99,
       description:
         "Welcome home the iconic, undead killer Pop! Jason Voorhees into your Friday the 13th collection. Collectible stands approximately 3.75-inches tall.",
       category: "Movies & TV",
@@ -53,7 +53,7 @@ module.exports = {
     },
     {
       name: "Freddy Krueger",
-      price: "$" + 12.0,
+      price: "$" + 129.00,
       description:
         "Pop! Freddy Krueger is looking to tear through your Nightmare on Elm Street collection. Collectible stands approximately 3.75-inches tall.",
       category: "Movies & TV",
@@ -62,7 +62,7 @@ module.exports = {
     },
     {
       name: "Chucky",
-      price: "$" + 12.0,
+      price: "$" + 120.00,
       description:
         "Schedule a playdate with Bride of Chucky Pop! Chucky. Capture him to haunt your Pop! Movies collection. Vinyl figure is approximately 4-inches tall.",
       category: "Movies & TV",
@@ -71,7 +71,7 @@ module.exports = {
     },
     {
       name: "Leatherface",
-      price: "$" + 12.0,
+      price: "$" + 50.00,
       description:
         "Leatherface's appetite has grown and he's decided to infiltrate your collection of horrors and The Texas Chainsaw Massacre as a Funko Pop! figure. Vinyl figure is approximately 4.5-inches tall.",
       category: "Movies & TV",
@@ -80,7 +80,7 @@ module.exports = {
     },
     {
       name: "Sam With Lollipop",
-      price: "$" + 15.0,
+      price: "$" + 15.00,
       description:
         "Keep the jack-o’-lanterns lit! Funko exclusive Pop! Sam, from Trick ‘r Treat, holds a lollipop, and he’s coming to enforce the rules of Halloween. Stock up on chocolate and add thrilling fun to your Pop! Movies collection. Vinyl figure is approximately 3.59-inches tall.",
       category: "Movies & TV",
@@ -89,7 +89,7 @@ module.exports = {
     },
     {
       name: "Flashing Gremlin",
-      price: "$" + 12.0,
+      price: "$" + 320.00,
       description:
         "Bring this mischievous Mogwai into your Gremlins collection with this Pop! Flashing Gremlin. Vinyl figure is approximately 4-inches tall.",
       category: "Movies & TV",
@@ -98,7 +98,7 @@ module.exports = {
     },
     {
       name: "Red Faced Demon",
-      price: "$" + 12.0,
+      price: "$" + 52.00,
       description:
         "Beware the paranormal. The Pop! Red-Faced Demon has arrived to claw his way into your Horror collection! Expand your Insidious lineup when you add this otherworldly evil to your set. Vinyl figure is approximately 3.75-inches tall.",
       category: "Movies & TV",
@@ -107,7 +107,7 @@ module.exports = {
     },
     {
       name: "The Wolf Man",
-      price: "$" + 15.0,
+      price: "$" + 68.00,
       description:
         "Add some hair-raising thrills to your collection with this exclusive, deco-inspired Pop! The Wolf Man™! Howl along when you welcome this ferocious creature into your Universal Monsters set. Vinyl figure is approximately 4.05-inches tall.",
       category: "Movies & TV",
@@ -116,7 +116,7 @@ module.exports = {
     },
     {
       name: "Eleven",
-      price: "$" + 15.0,
+      price: "$" + 15.00,
       description:
         "Hawkins, Indiana is harboring dangerous and supernatural secrets. Bring home the happenings, characters, and breakthrough moments of Stranger Things with Pop! Eleven with Eggos. Vinyl figure is approximately 3.65-inches tall.",
       category: "Movies & TV",
@@ -125,7 +125,7 @@ module.exports = {
     },
     {
       name: "Carrie",
-      price: "$" + 15.0,
+      price: "$" + 200.00,
       description:
         "A real scream of a prom queen, Carrie, is here to make a splash in your horror collection! Still wearing her prom dress, covered in blood, this exclusive, black light Pop! Carrie channels her telekinetic powers to carry out her revenge. Capture her for your Pop! Movies collection. Vinyl figure is approximately 3.75-inches tall.",
       category: "Movies & TV",
@@ -134,7 +134,7 @@ module.exports = {
     },
     {
       name: "Pennywise",
-      price: "$" + 15.0,
+      price: "$" + 150.00,
       description:
         "Pop! Pennywise welcomes you with open arms, will you welcome him into your It: Chapter 2 collection with the same gesture? Collectible stands approximately 3.75-inches tall.",
       category: "Movies & TV",
@@ -143,7 +143,7 @@ module.exports = {
     },
     {
       name: "The Nun",
-      price: "$" + 15.0,
+      price: "$" + 236.00,
       description:
         "Your horror collection is about to have an unholy visitor. Will you try to escape this exclusive, moonlit Pop! The Nun™ (Demonic) or will she have to pry her way into your The Nun set? Vinyl figure is approximately 3.8-inches tall.",
       category: "Movies & TV",
@@ -152,7 +152,7 @@ module.exports = {
     },
     {
       name: "The Grabber",
-      price: "$" + 12.0,
+      price: "$" + 523.00,
       description:
         "It's time to answer the call…. The Grabber is here as a blood red Pop! collectible to show your horror collection a magic trick. Now's your chance to get the jump on Funko exclusive Pop! The Grabber. Vinyl figure is approximately 4-inches tall.",
       category: "Movies & TV",
@@ -161,7 +161,7 @@ module.exports = {
     },
     {
       name: "Frankenstein",
-      price: "$" + 12.0,
+      price: "$" + 12.00,
       description:
         "Electrify your collection with this deco-inspired Pop! Frankenstein™! Be careful not to light any torches when you welcome this ghoulish creature into your Universal Monsters set. Vinyl figure is approximately 4.05-inches tall.",
       category: "Movies & TV",
@@ -170,13 +170,20 @@ module.exports = {
     },
     {
       name: "Bride of Frankenstein",
-      price: "$" + 12.99,
+      price: "$" + 13.99,
       description:
         "Prepare for a hair-raising romance with Pop! The Bride of Frankenstein™! Conduct a shocking wedding in your Universal Monsters collection when you walk this ghoulish bride down the aisle in her striking deco motif. Vinyl figure is approximately 4.4-inches tall.",
       category: "Movies & TV",
       image:
         "https://funko.com/dw/image/v2/BGTS_PRD/on/demandware.static/-/Sites-funko-master-catalog/default/dw191153e4/images/funko/upload/80995_POP-Movies_UMS5_BrideofFrank_GLAM_FigureOnly-WEB.png?sw=800&sh=800",
     },
+    {
+      name: "Pop! Boo with Hood Up",
+      description: "Celebrate the 20th Anniversary of Disney Pixar’s Monster’s Inc. with a Pop! The original mission was to scare until Mike and Sulley got a scare of their own. Bring home Pop! Boo with her hood up to complete your collection of Monster’s Inc. and celebrate the 20th Anniversary of the movie’s release! Vinyl figure is approximately 3.5-inches tall",
+      price: "$" + 214.99,
+      category: "K's",
+      image: "https://funko.com/dw/image/v2/BGTS_PRD/on/demandware.static/-/Sites-funko-master-catalog/default/dwb75a640b/images/funko/57741-1.png?sw=800&sh=800"
+    }
     
   ],
 };

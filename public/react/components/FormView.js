@@ -6,8 +6,8 @@ export const FormView = () => {
     return (
         <>
         <Navigation />
-            <div className="box">
-                <div className="p-3 bg-success mx-auto">
+            <div className="add-form">
+                <div className="">
                     <FunkoForm />
                 </div>
             </div>

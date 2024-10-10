@@ -53,6 +53,7 @@ export const FunkoUpdateForm = ({ id }) => {
           name="name"
           maxLength="50"
           onChange={handleChange}
+          size="small"
         />
       </FormControl>
       <FormControl>
@@ -63,6 +64,7 @@ export const FunkoUpdateForm = ({ id }) => {
           name="description"
           maxLength="250"
           onChange={handleChange}
+          size="small"
         />
       </FormControl>
       <FormControl>
@@ -74,6 +76,7 @@ export const FunkoUpdateForm = ({ id }) => {
           name="price"
           maxLength="50"
           onChange={handleChange}
+          size="small"
         />
       </FormControl>
       <FormControl>
@@ -85,6 +88,7 @@ export const FunkoUpdateForm = ({ id }) => {
           name="category"
           maxLength="50"
           onChange={handleChange}
+          size="small"
 
         />
       </FormControl>
@@ -96,20 +100,21 @@ export const FunkoUpdateForm = ({ id }) => {
           name="image"
           maxLength="250"
           onChange={handleChange}
+          size="small"
         />
       </FormControl>
     </div>
+      <Button
+        onClick={() => {
+          fetchDeletePage(funko.id);
+          setView(1)
+        }}
+        type="submit"
+        variant="outlined"
+        className="delete-btn"
+      >Update
+      </Button>
 
-    <Button
-      onClick={() => {
-        fetchDeletePage(funko.id);
-        setView(1)
-      }}
-      type="submit"
-      variant="outlined"
-      className="delete-btn"
-    >Update
-    </Button>
 
     {/* <textarea
 

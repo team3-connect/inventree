@@ -32,9 +32,9 @@ export const FunkoList = ({ funkoPops, fetchPage, fetchDeletePage }) => {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                  <Button variant="outlined" size="small" className='delete'
+                  <Button variant="outlined" size="small" className='list-button'
                   onClick={() => { fetchDeletePage(funkoPop.id); }}>Delete</Button>
-                <Button variant="outlined" size="small" className="pageNav"
+                <Button variant="outlined" size="small" className="list-button"
                   
                   onClick={() => fetchPage(funkoPop.id)}>View Funko</Button>
                   </CardActions>
