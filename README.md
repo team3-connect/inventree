@@ -9,8 +9,7 @@
 - Add Funkopops: Add new Funkopops to your inventory, including details like name, description, price, category, image
 - Edit Funkopops: Update the details of any Funkopop in your collection.
 - Delete Funkopops: Remove Funkopops from your collection that you no longer own.
-- Search: Quickly find specific Funkopops in your collection.
-- Responsive Design: Optimized for desktop and mobile devices.
+- Responsive Design: Optimized for most desktop and mobile devices.
 
 ## Tech Stack
 
@@ -29,3 +28,7 @@
 - split terminals
 - npm run server-dev 
 - npm run client-dev
+
+### Issues when developing
+- start with no modified files within a new branch.
+- Modifying may affect the compiling.
