@@ -32,3 +32,6 @@
 ### Issues when developing
 - start with no modified files within a new branch.
 - Modifying may affect the compiling.
+
+### Reflection
+- This collaborative project enhanced our understanding of e-commerce development, database optimization, and integrating payment gateways. As a team, we gained practical experience with agile workflows, version control strategies, and responsive design practices, strengthening our ability to work effectively on comprehensive full-stack applications.
